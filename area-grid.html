@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> area grid </title>
+        <meta charset="utf-8">
+        
+        <style>
+
+            .wrapper {
+                display: grid;
+                
+                grid-template-columns: 100px 100px 100px;
+                
+                grid-template-areas: "....... header  header" "sidebar content content";
+                /*grid-template-areas: "sidebar header  header" "sidebar content content";                */
+                
+                grid-gap: 10px;
+
+                border : 1px solid blue;
+            }
+
+            .box {
+                border: 1px solid red;
+            }
+
+            .sidebar {
+                grid-area: sidebar;
+            }
+
+            .content {
+                grid-area: content;
+            }
+
+            .header {
+                grid-area: header;
+            }
+
+
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="wrapper">
+
+            <div class="box header"> 헤더 </div>
+            <div class="box sidebar"> 슬라이드바 </div>
+            <div class="box content"> 콘텐츠 </div>
+
+        </div>
+
+    </body>
+
+</html>
