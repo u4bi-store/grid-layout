@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> media grid </title>
+        <meta charset="utf-8">
+        
+        <style>
+
+            .wrapper {
+                display: grid;
+
+                grid-template-areas:
+                "header"
+                "sidebar"
+                "content"
+                "sidebar2"
+                "footer";
+
+                grid-gap: 1em;
+
+                border : 1px solid blue;
+            }
+
+            @media (min-width: 500px)  {
+                .wrapper {
+                    grid-template-columns: 20% auto;
+                    grid-template-areas:
+                    "header   header"
+                    "sidebar  content"
+                    "sidebar2 sidebar2"
+                    "footer   footer";
+                }
+            }
+                      
+            @media (min-width: 760px)   {
+                .wrapper {
+                    grid-gap: 20px;
+                    
+                    grid-template-columns: 120px auto 120px;
+                    
+                    grid-template-areas:
+                    "header  header  header"
+                    "sidebar content sidebar2"
+                    "footer  footer  footer";
+                    
+                    /*max-width: 900px;*/
+
+                }
+            }
+            
+            .box {
+                border: 1px solid red;
+
+                height: 100px;
+            }
+
+            .sidebar {
+                grid-area: sidebar;
+            }
+
+            .sidebar2 {
+                grid-area: sidebar2;
+            }
+
+            .content {
+                grid-area: content;
+            }
+
+            .header {
+                grid-area: header;
+            }
+
+            .footer {
+                grid-area: footer;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="wrapper">
+            
+            <div class="box header"> 헤더 </div>
+            <div class="box sidebar"> 슬라이드바 </div>
+            <div class="box sidebar2"> 슬라이드바 2 </div>
+            <div class="box content">
+                
+                콘텐츠
+
+                <br />
+
+                이 칸은 콘텐츠 영역입니다. 이 칸은 콘텐츠 영역입니다. 이 칸은 콘텐츠 영역입니다. 이 칸은 콘텐츠 영역입니다. 이 칸은 콘텐츠 영역입니다. 이 칸은 콘텐츠 영역입니다. 이 칸은 콘텐츠 영역입니다.
+            
+            </div>
+            <div class="box footer"> 푸터 </div>
+
+        </div>
+
+    </body>
+
+</html>
